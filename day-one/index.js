@@ -1,6 +1,3 @@
-// Import stylesheets
-import './style.css';
-
 // Import data
 import { data } from './data';
 
@@ -40,6 +37,7 @@ data.forEach((baseWindowDepth, index, depths) => {
 // Write Javascript code!
 const appDiv = document.getElementById('app-day-one');
 appDiv.innerHTML = `
-  <h1>${increasingDepths} entries where depth increases</h1>
-  <h1>${increasingSums} windows where depth increases</h1>
+  <p>Part One: ${increasingDepths} entries where depth increases</p>
+  <p>Part Two: ${increasingSums} windows where depth increases</p>
 `;
+//console.log(appDiv);

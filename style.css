@@ -1,3 +1,120 @@
-h1, h2 {
-  font-family: Lato;
+.header {
+  padding: 2rem 1rem;
+  margin: 0 0 1rem 0;
+}
+
+.title,
+.subtitle,
+.solution__title {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: goldenrod;
+}
+
+.title {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+}
+
+.wrapper {
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.solution {
+  max-width: 80vw;
+  width: 70rem;
+  padding: 4rem;
+  border: 2px solid goldenrod;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.solution__title {
+  color: darkred;
+}
+
+.solution__output {
+  color: #333;
+}
+
+/* Ribons from https://www.nxworld.net/pure-css-corner-ribbon.html*/
+.ribbon {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: absolute;
+}
+.ribbon::before,
+.ribbon::after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  display: block;
+  border: 5px solid darkred;
+}
+.ribbon span {
+  position: absolute;
+  display: block;
+  width: 225px;
+  padding: 15px 0;
+  background-color: darkgreen;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font: 700 18px/1 'Lato', sans-serif;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  text-align: center;
+}
+.ribbon-top-left {
+  top: -10px;
+  left: -10px;
+}
+.ribbon-top-left::before,
+.ribbon-top-left::after {
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+.ribbon-top-left::before {
+  top: 0;
+  right: 0;
+}
+.ribbon-top-left::after {
+  bottom: 0;
+  left: 0;
+}
+.ribbon-top-left span {
+  right: -25px;
+  top: 30px;
+  transform: rotate(-45deg);
+}
+.ribbon-bottom-right {
+  bottom: -10px;
+  right: -10px;
+}
+.ribbon-bottom-right::before,
+.ribbon-bottom-right::after {
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+}
+.ribbon-bottom-right::before {
+  bottom: 0;
+  left: 0;
+}
+.ribbon-bottom-right::after {
+  top: 0;
+  right: 0;
+}
+.ribbon-bottom-right span {
+  left: -25px;
+  bottom: 30px;
+  transform: rotate(-225deg);
 }
